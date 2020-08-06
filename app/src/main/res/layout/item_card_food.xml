@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="8dp"
+    app:cardElevation="8dp"
+    app:cardCornerRadius="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/image_food"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            tools:src="@drawable/cake_cheese"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/food_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_food"
+            tools:text="Choco Cake"
+            android:maxLines="2"
+            android:layout_marginTop="8dp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"/>
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            style="@style/Widget.AppCompat.RatingBar.Small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/food_name"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="-6dp"
+            android:layout_marginTop="-2dp"
+            android:numStars="5"
+            android:progressTint="@color/colorPrimaryDark"
+            android:rating="5"
+            android:scaleX="0.8"
+            android:scaleY="0.8" />
+
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="6"
+            android:paddingRight="20dp"
+            android:layout_below="@id/ratingBar"
+            android:layout_marginTop="7dp"
+            android:textSize="11sp"
+            tools:text="aku adalah anak gembala selalu riang serta gembira"/>
+
+        <Button
+            android:id="@+id/btn_detail"
+            android:layout_width="match_parent"
+            android:layout_height="20dp"
+            android:layout_marginTop="25dp"
+            android:layout_gravity="bottom"
+            android:layout_below="@id/desc"
+            android:background="@drawable/button_background"
+            android:textColor="@android:color/white"
+            tools:text="Detail"
+            android:text="Detail"
+            tools:textSize="12sp"/>
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>
